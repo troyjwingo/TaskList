@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+	  Author: Troy Wingo
+	-->
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    -->
+    
+	<title>At least it works. sort-of.</title>
+	<style>
+    html {
+      background-color: black;
+    }
+		#title {
+			text-align: center;
+            color: white;
+            text-shadow: 2px 2px 10px black;
+            background-color: gray;
+		}
+    #div1, #div2 {
+      text-align: center;
+      padding: 50px;
+    }
+		
+	</style>
+  </head>
+  <body>
+	<header>
+	  <h1 id="title">This Is An Electron App</h1>
+	</header>
+    <div id='div2'>
+      <input type="text" id='content'>
+      <button id="btn">Create A File</button><br>
+    </div>
+    <div id='div1'>
+      <button id="open">Open A File</button><br>
+      <textarea id="output" rows=8 ></textarea><br>
+    </div>
+    <script>
+        require('./renderer.js')
+    </script>
+  </body>
+</html>
